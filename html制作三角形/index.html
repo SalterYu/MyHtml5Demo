@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<style>
+
+.test-border{
+    border-top: 50px solid #ff0000;
+    border-bottom: 50px solid #00a000;
+    border-left: 50px solid #ff7f50;
+    border-right: 50px solid #436eee;
+    text-align: center;
+}
+
+.test-border-2{
+    width: 0;
+    height: 0;
+    border-top: 50px solid #ff0000;
+    border-bottom: 50px solid #00a000;
+    border-left: 50px solid #ff7f50;
+    border-right: 50px solid #436eee;
+    text-align: center;
+}
+
+.test-border-3{
+    width: 0;
+    height: 0;
+    border-top: 50px solid #ff0000;
+    border-bottom: 50px solid #00a000;
+    border-left: 50px solid #ff7f50;
+    border-right: 50px solid transparent;
+    text-align: center;
+}
+
+.item {
+            position: absolute;
+            top:-10px;
+            right:70px;
+            clear: both;
+            margin-bottom: 23px;
+        }  
+        /* 向上的箭头 */
+        .dot-top {
+            font-size: 0;
+            line-height: 0;
+            border-width: 10px;
+            border-color: white;
+            border-top-width: 0;
+            border-style: dashed;
+            border-bottom-style: solid;
+            border-left: 10px solid transparent;
+            border-right:10px solid transparent;
+            border-bottom-width:15px;
+        }
+</style>
+<body>        
+    <div class="test-border">我是居中内容</div>
+    <hr/>
+    <div class="test-border"></div>
+    <hr/>
+    <div class="test-border-2"></div>
+    <hr/>
+    <div class="test-border-3"></div>
+</body>
+</html>

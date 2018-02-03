@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <link href="../../assets/UED/i200-sui-v1-0-0.css" rel="stylesheet" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Microsoft YaHei","PingFang SC",sans-serif;
+        }
+
+        body {
+            min-width: 970px;
+        }
+
+        .container {
+            width: 1091px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+
+        .row {
+            width: 100%;
+            padding-top: 70px;
+            display: flex;
+        }
+
+        .col-xs {
+            float: left;
+        }
+
+        .col-xs-7 {
+            width: 58.333333%;
+        }
+
+        .col-xs-6 {
+            width: 50%;
+            float: left;
+        }
+
+        .col-xs-5 {
+            width: 41.6666667%;
+        }
+
+        .col-xs-4 {
+            width: 33.333333%;
+        }
+
+        .col-xs-3 {
+            width: 25%;
+            float: left;
+        }
+
+        .col-xs-9 {
+            width: 75%;
+            float: left;
+        }
+
+        @media screen and (max-width:1280px) {
+            .col-xs-5 {
+                width: 33.333333%;
+                text-align: center;
+            }
+        }
+
+        @media screen and (max-width:1070px) {
+            .col-xs-7 {
+                width: 44%;
+            }
+        }
+
+        @media screen and (max-width:1070px) {
+            body {
+                overflow: -Scroll;
+                overflow-x: hidden;
+            }
+        }
+
+        .top-nav {
+            width: 100%;
+            background: #fafafa;
+            padding: 17px 25px;
+            border-bottom: 1px solid #ddd;
+        }
+
+            .top-nav div {
+                display: inline;
+                color: #ff6a3c;
+                border-bottom: 4px solid #ff6a3c;
+                padding-bottom: 13px;
+                cursor: pointer;
+            }
+
+        .btn {
+            height: 36px;
+            -moz-min-width: 120px;
+            -ms-min-width: 120px;
+            -o-min-width: 120px;
+            -webkit-min-width: 120px;
+            min-width: 120px;
+            line-height: 20px;
+            font-size: 14px;
+            border: none;
+            cursor: pointer;
+            -ms-border-radius: 3px;
+            border-radius: 3px;
+        }
+
+            .btn:hover {
+                -ms-opacity: .5;
+                opacity: .5;
+            }
+
+        .btn-blue {
+            color: #fff;
+            background-color: #3894ff;
+            border-color: #3894ff;
+        }
+
+        .btn-orange {
+            color: #fff;
+            background-color: #ff6a3c;
+            border-color: #ff6a3c;
+        }
+
+        .img-pic {
+            width: 359.76px;
+            height: 493px;
+        }
+
+       
+
+        .padding-left-150 {
+            padding-left: 150px;
+        }
+
+        .center {
+            text-align: center;
+        }
+
+        .body div p {
+            margin-top: 10px;
+        }
+
+
+        hr {
+            border: 1px dotted #dddddd;
+            margin-top: 30px;
+            margin-bottom: 30px;
+        }
+
+        .head {
+            position: relative;
+            height: 26.6px;
+        }
+
+            .head img {
+                left: 0;
+                width: 26.6px;
+                height: 26.6px;
+            }
+
+        .head span {
+            font-size: 26.6px;
+            position: relative;
+            top: -4.44px;
+        }
+        .title {
+            border-left: 4px solid #ff6a3c;
+            padding-left: 11.1px;
+            font-size: 17.77px;
+            font-weight: 600;
+            line-height: 1;
+            color: #666;
+            margin-top: 5.55px;
+        }
+
+        #title {
+            margin-left:5px;
+        }
+        .img-box {
+            width: 62px;
+            height: 62px;
+            -ms-border-radius: 60px;
+            border-radius: 60px;
+            margin: auto;
+            overflow: hidden;
+            border: 1px solid #ddd;
+        }
+
+        .qrCode-board {
+            width: 161px;
+            height: 161px;
+            -webkit-box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.44);
+            -ms-box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.44);
+            box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.44);
+            position: relative;
+            left: -4px;
+            background-color: #ffffff;
+            display: none;
+            -ms-opacity: 0;
+            opacity: 0;
+            top:-5px;
+        }
+
+        .qrCode {
+            position: absolute;
+        }
+
+        .shop:hover .qrCode-board {
+            -ms-opacity: 1;
+            opacity: 1;
+            display: block;
+        }
+        /*.shop:hover .qrCode {
+            -ms-opacity: 1;
+            opacity: 1;
+            display: block;
+        }*/
+        .qrCode-img {
+            width: 150px;
+            height: 150px;
+            position: absolute;
+            left: 6px;
+            top: 6px;
+        }
+
+        .el-col {
+            float: left;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+        }
+
+        .el-col-6 {
+            width: 25%;
+        }
+
+        .shop {
+            margin-top: 55px;
+            text-align: center;
+        }
+
+        .shop-name {
+            font-size: 14px;
+            text-align: center;
+        }
+
+        .box {
+            cursor: pointer;
+        }
+
+        .item {
+            position: absolute;
+            top:-10px;
+            right:70px;
+            clear: both;
+            margin-bottom: 23px;
+        }  
+        /* 向上的箭头 */
+        .dot-top {
+            font-size: 0;
+            line-height: 0;
+            border-width: 10px;
+            border-color: white;
+            border-top-width: 0;
+            border-style: dashed;
+            border-bottom-style: solid;
+            border-left: 10px solid transparent;
+            border-right:10px solid transparent;
+            border-bottom-width:15px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="top-nav">
+        <div>开通手机橱窗</div>
+    </div>
+    <div class="container">
+        <div class="row" style="margin-top:25px">
+            <div class="col-xs col-xs-5 ">
+                <img src="./assets/images/showcase-left-2.png" class="img-pic" />
+            </div>
+            <div class="col-xs col-xs-7">
+                <div class="head">
+
+                    <img src="./assets/images/showcase.png" />
+                    <span id="title">手机橱窗</span>
+                </div>
+
+                <div class=" body">
+                    <div class="top-content">
+                        <p style="font-size: 16px; line-height: 25px; color: #666666;margin-top:15px">
+                            一分钟轻松上手开家网店，还可搭配微信会员卡，获客更轻松！
+                        </p>
+                        <p style="margin-top:20px">
+                            <button id="tryUse" class="btn  btn-blue" style="margin-right:10px">试用一个月</button>
+                            <button id="shopping" class="btn  btn-orange">购买正式版</button>
+                        </p>
+                    </div>
+                    <hr />
+                    <p class="title">别人家的手机橱窗</p>
+                    <div class="box">
+                        <div>
+                            <div class="el-col el-col-6">
+                                <div class="shop">
+                                    <div class="img-box">
+                                        <img src="http://img.i200.cn/storelogo/2017/108022/fcfd5e5e734ed9f90a644282ce5a0f7a.png" alt="" style="width: 100%; height: 100%">
+                                    </div>
+                                    <div class="qrCode">
+                                        <div class="qrCode-board ">
+                                            <div >
+                                                <img class="qrCode-img" src="http://qrcode.i200.cn/api.ashx?text=http://m.i200.cn/v/static/auth.html?redirect_uri=http://m.i200.cn/v/static/auth.html?redirect_uri=http%3A%2F%2Fm.i200.cn%2Fv?accId=52" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <p class="shop-name" text="">精品生活馆</p>
+                            </div>
+                        </div><div>
+                            <div class="el-col el-col-6">
+                                <div class="shop">
+                                    <div class="img-box">
+                                        <img src="http://img.i200.cn/storelogo/2017/108022/fcfd5e5e734ed9f90a644282ce5a0f7a.png" alt="" style="width: 100%; height: 100%">
+                                    </div>
+                                    <div style="position:absolute">
+                                        <div class="qrCode-board ">
+                                            <div class="qrCode">
+                                                <img class="qrCode-img" src="http://qrcode.i200.cn/api.ashx?text=http://m.i200.cn/v/static/auth.html?redirect_uri=http://m.i200.cn/v/static/auth.html?redirect_uri=http%3A%2F%2Fm.i200.cn%2Fv?accId=52" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <p class="shop-name" text="">精品生活馆</p>
+                            </div>
+                        </div><div>
+                            <div class="el-col el-col-6">
+                                <div class="shop">
+                                    <div class="img-box">
+                                        <img src="http://img.i200.cn/storelogo/2017/108022/fcfd5e5e734ed9f90a644282ce5a0f7a.png" alt="" style="width: 100%; height: 100%">
+                                    </div>
+                                    <div style="position:absolute">
+                                        <div class="qrCode-board ">
+                                            <div class="qrCode">
+                                                <img class="qrCode-img" src="http://qrcode.i200.cn/api.ashx?text=http://m.i200.cn/v/static/auth.html?redirect_uri=http://m.i200.cn/v/static/auth.html?redirect_uri=http%3A%2F%2Fm.i200.cn%2Fv?accId=52" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <p class="shop-name" text="">精品生活馆</p>
+                            </div>
+                        </div><div>
+                            <div class="el-col el-col-6">
+                                <div class="shop">
+                                    <div class="img-box">
+                                        <img src="http://img.i200.cn/storelogo/2017/108022/fcfd5e5e734ed9f90a644282ce5a0f7a.png" alt="" style="width: 100%; height: 100%">
+                                    </div>
+                                    <div style="position:absolute">
+                                        <div class="qrCode-board ">
+                                            <div class="qrCode">
+                                                <img class="qrCode-img" src="http://qrcode.i200.cn/api.ashx?text=http://m.i200.cn/v/static/auth.html?redirect_uri=http://m.i200.cn/v/static/auth.html?redirect_uri=http%3A%2F%2Fm.i200.cn%2Fv?accId=52" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <p class="shop-name" text="">精品生活馆</p>
+                            </div>
+                        </div><div>
+                            <div class="el-col el-col-6">
+                                <div class="shop">
+                                    <div class="img-box">
+                                        <img src="http://img.i200.cn/storelogo/2017/108022/fcfd5e5e734ed9f90a644282ce5a0f7a.png" alt="" style="width: 100%; height: 100%">
+                                    </div>
+                                    <div style="position:absolute">
+                                        <div class="qrCode-board ">
+                                            <div class="qrCode">
+                                                <img class="qrCode-img" src="http://qrcode.i200.cn/api.ashx?text=http://m.i200.cn/v/static/auth.html?redirect_uri=http://m.i200.cn/v/static/auth.html?redirect_uri=http%3A%2F%2Fm.i200.cn%2Fv?accId=52" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <p class="shop-name" text="">精品生活馆</p>
+                            </div>
+                        </div><div>
+                            <div class="el-col el-col-6">
+                                <div class="shop">
+                                    <div class="img-box">
+                                        <img src="http://img.i200.cn/storelogo/2017/108022/fcfd5e5e734ed9f90a644282ce5a0f7a.png" alt="" style="width: 100%; height: 100%">
+                                    </div>
+                                    <div style="position:absolute">
+                                        <div class="qrCode-board ">
+                                            <div class="qrCode">
+                                                <img class="qrCode-img" src="http://qrcode.i200.cn/api.ashx?text=http://m.i200.cn/v/static/auth.html?redirect_uri=http://m.i200.cn/v/static/auth.html?redirect_uri=http%3A%2F%2Fm.i200.cn%2Fv?accId=52" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <p class="shop-name" text="">精品生活馆</p>
+                            </div>
+                        </div><div>
+                            <div class="el-col el-col-6">
+                                <div class="shop">
+                                    <div class="img-box">
+                                        <img src="http://img.i200.cn/storelogo/2017/108022/fcfd5e5e734ed9f90a644282ce5a0f7a.png" alt="" style="width: 100%; height: 100%">
+                                    </div>
+                                    <div style="position:absolute">
+                                        <div class="qrCode-board ">
+                                            <div class="qrCode">
+                                                <img class="qrCode-img" src="http://qrcode.i200.cn/api.ashx?text=http://m.i200.cn/v/static/auth.html?redirect_uri=http://m.i200.cn/v/static/auth.html?redirect_uri=http%3A%2F%2Fm.i200.cn%2Fv?accId=52" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <p class="shop-name" text="">精品生活馆</p>
+                            </div>
+                        </div><div>
+                            <div class="el-col el-col-6">
+                                <div class="shop">
+                                    <div class="img-box">
+                                        <img src="http://img.i200.cn/storelogo/2017/108022/fcfd5e5e734ed9f90a644282ce5a0f7a.png" alt="" style="width: 100%; height: 100%">
+                                    </div>
+                                    <div style="position:absolute">
+                                        <div class="qrCode-board ">
+                                            <div class="qrCode">
+                                                <img class="qrCode-img" src="http://qrcode.i200.cn/api.ashx?text=http://m.i200.cn/v/static/auth.html?redirect_uri=http://m.i200.cn/v/static/auth.html?redirect_uri=http%3A%2F%2Fm.i200.cn%2Fv?accId=52" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <p class="shop-name" text="">精品生活馆</p>
+                            </div>
+                        </div>
+
+                    </div>
+                    <!--<div class="box">
+                        <div v-for="item in mobcase">
+                            <div class="el-col el-col-6">
+                                <div class="shop">
+                                    <div class="img-box">
+                                        <img v-bind:src="item.accountLogo" alt="" style="width: 100%; height: 100%">
+                                    </div>
+                                    <p class="shop-name" v-text="item.accountName"></p>
+                                    <div class="qrCode">
+                                        <img class="qrCode-img" v-bind:src="'http://qrcode.i200.cn/api.ashx?text=http://m.i200.cn/v/static/auth.html?redirect_uri='+item.accountUrl" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>-->
+                    <!--<li v-for="item in mobcase">
+                        <div class="img_box">
+                            <img v-bind:src="item.accountLogo" style="width: 60px; height: 60px"/>
+                        </div>
+                        <div style="position: absolute;width:80px">
+                            <span v-text="item.accountName" style="margin-right: 5px;"></span>
+                        </div>
+                        <div class="qrCode">
+                            <img class="qrCode-img" v-bind:src="'http://qrcode.i200.cn/api.ashx?text=http://m.i200.cn/v/static/auth.html?redirect_uri='+item.accountUrl"/>
+                        </div>
+                    </li>-->
+
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <script src="../../assets/scripts/vue.js"></script>
+    <script src="../../assets/scripts/axios.min.js"></script>
+    <script type="text/javascript" src="/assets/plugins/jquery/v1.7/jquery-min.js?20160304"></script>
+
+    <script>
+        var status = window.parent.$('#showcaseStatus').val();
+        if (status === '-1') {
+            $('#title').text('手机橱窗已到期，请尽快续费')
+            $('#tryUse').text('搭配微信会员卡').on('click', function () {
+                window.parent.jumpTo('/OnlineMall/OnlineMallMaster.aspx?firstshow=54')
+            })
+            $('#shopping').text('立即购买').on('click', function () {
+                window.parent.jumpTo('/OnlineMall/OnlineMallMaster.aspx?firstshow=28')
+            })
+        } else if (status == '0') {
+            $('#tryUse').on('click', function () {
+                tryMobileShowcase();
+            })
+            $('#shopping').on('click', function () {
+                window.parent.jumpTo('/OnlineMall/OnlineMallMaster.aspx?firstshow=28')
+            })
+        }
+
+        function tryMobileShowcase() {
+            var postJson = {};
+            var url = "/AppHome/mobile_showcaseNew/Ashx/MobileSet.ashx?type=trialMobileCase";
+            $.ajax({
+                type: 'POST',
+                url: url,
+                success: function (res) {
+                    if (res == '1') {
+                        window.parent.$('#showcaseStatus').val(1);
+                        window.parent.jumpTo('/AppHome/mobile_showcaseNew/V2MobileMaster.aspx');
+                    }
+                }
+            })
+        }
+    </script>
+    <script>
+        var CookieHelper = (function () {
+            var obj = {}
+            var cookiesObj = function () {
+                var result = [];
+                var cookies = document.cookie.split(";");
+                cookies.map(function (current) {
+                    var strArray = current.split("=");
+                    var key = strArray[0];
+                    var value = strArray[1];
+                    var o = {
+                        key: key,
+                        val: value
+                    }
+                    result.push(o);
+                }, result);
+                return result;
+            }
+
+            var cookieObj = cookiesObj();
+            obj.getCookie = function (name) {
+                var o = cookieObj.reduce(function (obj, current) {
+                    if (current.key.replace(" ", "") === name) {
+                        obj.key = current.key.replace(" ", "");
+                        obj.val = current.val;
+                        return obj;
+                    }
+                    return obj;
+                }, { key: '', val: '' });
+                return o;
+            }
+            return obj;
+        })(window.document);
+
+        var instance = axios.create({
+            baseURL: "http://webapi.i200.cn/",
+            timeout: 8000,
+            headers: { 'token': '01525EFA8B2BA8D7F0CFEC3E0B85443DFECB10E484F94F784FB1B1DFE9E3E9FF9A3386A68FBAC955FE7E1140D7985340' }
+        });
+        Vue.prototype.$http = instance;
+        var VM = new Vue({
+            data: {
+                mobcase: []
+            },
+            mounted: function () {
+                this.$http.get("v0/mobilecase/recommendaccount").then(function (res) {
+                    VM.mobcase = res.data.data;
+                });
+            }
+        }).$mount('.box');
+
+
+    </script>
+    <script type="text/javascript">
+        $(function () {
+            window.top.loadFinished();
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <style type="text/css">
+        .btn a {
+            text-decoration: none;
+        }
+
+        .btn {
+            display: inline-block;
+            background:no-repeat 0 0;
+            background-color:aquamarine;
+            height: 22px;
+            line-height: 22px;
+            color: #666;
+            vertical-align: top;
+        }
+
+        .btn i {
+            display: block;
+            font-style: normal;
+            font-size: 12px;
+            padding: 0 10px;
+            background: url(s_btn.png) no-repeat right -22px;
+        }
+
+        .btn:hover {
+            text-decoration: none;
+            color: #4c8136;
+            background-position: 0 -44px;
+        }
+
+        .btn:hover i {
+            background-position: right -66px;
+        }
+
+        .btn:active {
+            background-position: 0 -88px;
+        }
+
+        .btn:active i {
+            background-position: right -110px;
+        }
+
+        .btn_disabled,
+        .btn_disabled:hover {
+            background: no-repeat 0 -132px;
+            background-color:aquamarine;
+            cursor: default;
+        }
+
+        .btn_disabled i,
+        .btn_disabled:hover i,
+        .s_btn_disabled:active i {
+            background-position: right -154px;
+            color: #999;
+        }
+    </style>
+</head>
+
+<body>
+    <a href="#" class="btn">
+        <i>这是按钮</i>
+    </a>
+    <a href="#" class="btn">
+        <i>按钮</i>
+    </a>
+    <input type="button" value="1231" />
+</body>
+
+</html>

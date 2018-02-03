@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+
+<body>
+  <div class="box">
+    <table>
+      <thead>
+        <tr>
+          <th style="width:20%">thead1</th>
+          <th style="width:80%">thead2</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            123112312312313
+          </td>
+          <td>
+            1231 123112312312313 123112312312313 123112312312313 123112312312313 123112312312313 123112312312313 123112312312313 123112312312313
+            123112312312313 123112312312313 123112312312313 123112312312313 123112312312313
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <style>
+    * {
+      margin: 0
+    }
+
+    table {
+      width: 100%;
+      table-layout: fixed;  
+    }
+
+    tbody {
+      text-align: center;
+    }
+
+    tbody tr td {
+      border: 1px solid black;
+      text-overflow: ellipsis;
+      /* for IE */
+      -moz-text-overflow: ellipsis;
+      /* for Firefox,mozilla */
+      overflow: hidden;
+      white-space: nowrap;
+      border: 1px solid;
+    }
+
+    .box {
+      width: 100%;
+    }
+
+  </style>
+</body>
+
+</html>

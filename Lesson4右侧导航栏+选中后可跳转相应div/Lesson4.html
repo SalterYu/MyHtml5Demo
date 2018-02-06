@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 0;
+            height: 2000px;
+        }
+        
+        ul{
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        #lift_nav {
+            position: fixed;
+            width: 50px;     
+            right: 50px;
+            top:0;
+            border: 1px solid #999;
+            border-radius: 3px;
+        }
+
+        #lift_nav ul li{
+           /* padding: 4.5px 0;/*或者使用行间距*/
+           text-align: center;
+           font-size: 14px;
+           line-height: 30px;
+           cursor: pointer;
+        }
+        #lift_nav ul li:hover{
+            background-color:dodgerblue;
+            color: #fff;
+        }
+
+        .lift-item{
+            height: 400px;
+            width: 1000px;
+            border: 1px solid #000;
+            margin: auto;
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="lift_nav">
+        <ul>
+            <li>直播</li>
+            <li>番剧</li>
+            <li>鬼畜</li>
+            <li>国创</li>
+            <li>音乐</li>
+            <li>舞蹈</li>
+            <li>动画</li>
+            <li>游戏</li>
+            <li>科技</li>
+            <li>生活</li>
+            <li>时尚</li>
+            <li>广告</li>
+            <li>娱乐</li>
+            <li>电影</li>
+            <li>TV剧</li>
+            <li>番影视</li>
+            <li>纪录片</li>
+        </ul>
+    </div>
+    <div class="lift-item">直播</div>
+    <div class="lift-item">番剧</div>
+    <div class="lift-item">鬼畜</div>
+    <div class="lift-item">国创</div>
+    <div class="lift-item">音乐</div>
+    <div class="lift-item">舞蹈</div>
+    <div class="lift-item">动画</div>
+    <div class="lift-item">游戏</div>
+    <div class="lift-item">科技</div>
+    <div class="lift-item">生活</div>
+    <div class="lift-item">时尚</div>
+    <div class="lift-item">广告</div>
+    <div class="lift-item">娱乐</div>
+    <div class="lift-item">电影</div>
+    <div class="lift-item">TV剧</div>
+    <div class="lift-item">番影视</div>
+    <div class="lift-item">纪录片</div>
+</body>
+<script src="http://cdn.static.runoob.com/libs/jquery/1.10.2/jquery.min.js"></script>
+<script>
+    $("li").click(function(){
+        var index = $(this).index();
+        var offsetH = $('.lift-item').eq(index).offset().top;
+        $('html,body').animate({scrollTop:offsetH + 'px'});
+    })
+</script>
+</html>

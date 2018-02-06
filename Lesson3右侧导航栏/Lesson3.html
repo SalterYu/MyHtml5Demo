@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #right-side-bar{
+            width: 134px;
+         
+            margin: 150px 0 0 auto;
+            /* position: absolute; */
+        }
+        #right-side-bar ul{
+            list-style:none;
+            padding: 0;
+        }
+        .item{
+            position: relative;
+            left: 112px;
+            height: 30px;
+            border-bottom: 2px solid #666;
+            line-height: 30px;
+            background-color: #3366cc;
+        }
+        .item span{
+            display: inline-block;
+            width: 30px;
+            height: 30px;
+            background-color: aquamarine;
+            text-align: center;
+        }
+        .item span:hover .item{
+             left: 0px;
+        }
+    </style>
+</head>
+<body>
+    <div id="right-side-bar">
+        <ul>
+            <li class="item"><span>1</span>HTML</li>
+            <li class="item"><span>2</span>CSS</li>
+            <li class="item"><span>3</span>JS</li>
+            <li class="item"><span>4</span>Vue</li>
+            <li class="item"><span>5</span>React</li>
+            <li class="item"><span>6</span>TypeScript</li>
+            <li class="item"><span>7</span>Webpack</li>
+            <li class="item"><span>8</span>Gulp</li>
+        </ul>
+    </div>
+    <script src="http://cdn.static.runoob.com/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script>    
+    $("#right-side-bar").hover(function(){
+        $("li").each(function(i){
+            setTimeout(function(){
+                $(this).animate({left:0})
+            }.bind(this),i*50)
+        })
+    },function(){
+        $("li").each(function(i){
+            setTimeout(function(){
+                $(this).animate({left:"112px"})
+            }.bind(this),i*50)
+        })
+    })
+    </script>
+</body>
+</html>
